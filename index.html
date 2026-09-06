@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI College Assistant</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f7ff;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        h1 {
+            color: #2457d6;
+        }
+
+        input {
+            width: 70%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 12px 18px;
+            margin-left: 5px;
+            border: none;
+            border-radius: 8px;
+            background: #2457d6;
+            color: white;
+            cursor: pointer;
+        }
+
+        #answer {
+            margin-top: 20px;
+            padding: 15px;
+            background: #eef3ff;
+            border-radius: 10px;
+            min-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>🤖 AI College Assistant</h1>
+
+    <p>Ask me a college-related question!</p>
+
+    <input type="text" id="question" placeholder="Type your question">
+
+    <button onclick="askAssistant()">Ask</button>
+
+    <div id="answer">
+        Your answer will appear here.
+    </div>
+</div>
+
+<script>
+function askAssistant() {
+
+    let question = document.getElementById("question").value.toLowerCase();
+    let answer = document.getElementById("answer");
+
+    if (question.includes("course")) {
+        answer.innerHTML =
+        "Our college offers different courses. Please contact the college office for the complete course list.";
+    }
+
+    else if (question.includes("admission")) {
+        answer.innerHTML =
+        "For admission details, please visit the college admission office.";
+    }
+
+    else if (question.includes("exam")) {
+        answer.innerHTML =
+        "Please check the college notice board or exam section for the latest exam schedule.";
+    }
+
+    else if (question.includes("library")) {
+        answer.innerHTML =
+        "The college library provides books, study materials, and a quiet place for students to study.";
+    }
+    else if (question.includes("fee")) {
+    answer.innerHTML =
+    "Please contact the college office for information about tuition and other fees.";
+}
+
+else if (question.includes("timing")) {
+    answer.innerHTML =
+    "College timings may vary by department. Please check your college timetable.";
+}
+
+else if (question.includes("contact")) {
+    answer.innerHTML =
+    "Please contact the college office for official contact information.";
+}
+
+    else {
+        answer.innerHTML =
+        "Sorry, I don't know that yet. Please try asking about courses, admission, exams, or the library.";
+    }
+}
+</script>
+
+</body>
+</html>
